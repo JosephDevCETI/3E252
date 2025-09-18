@@ -25,9 +25,12 @@ public:
         }
     }
     void ConsultarSerie(){
+        string msj;
         for (int nFoco = 0; nFoco < 10; nFoco++)
         {
-           cout << focos[nFoco].ConsultarEstado();
+            msj = focos[nFoco].ConsultarEstado() ? "Encendido" : "Apagado" ;
+           cout << "Foco " << nFoco + 1 << ": " << msj << endl;
         }
+        cout << endl;
     }
 };
