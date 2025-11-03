@@ -22,7 +22,7 @@ char Particula::GetChar() const {
 
   switch (paso) {
     case 0: return '*';
-    case 1: return 'X';
+    case 1: return 'O';
     case 2: return 'o';
     default: return '.'; 
   }

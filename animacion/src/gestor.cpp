@@ -13,7 +13,7 @@ void GestorParticulas::GenerarParticulas() {
   if (Particulas.size() >= maximo_particulas) return;
   if (prob(rng) < 25) { 
     int x = distX(rng);
-    Particulas.push_back(make_shared<Particula>(x, 0, 250, alto));
+    Particulas.push_back(make_shared<Particula>(x, 0, 200, alto));
   }
 }
 
