@@ -13,3 +13,9 @@ bin/ejemplo: src/test.cpp
 
 ejemplo: bin/ejemplo
 	./bin/ejemplo
+
+bin/animacion: animacion/main.cpp
+	c++ animacion/main.cpp animacion/particle.cpp animacion/particlesystem.cpp -o bin/animacion -lftxui-component -lftxui-dom -lftxui-screen -pthread
+
+aniamcion: bin/animacion
+	./bin/animacion
