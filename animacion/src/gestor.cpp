@@ -7,13 +7,13 @@ GestorParticulas::GestorParticulas(int width, int height)
     rng(static_cast<unsigned>(chrono::high_resolution_clock::now().time_since_epoch().count())),
     distX(0, width - 1),
     prob(0, 99),
-    maximo_particulas(300) {}
+    maximo_particulas(350) {}
 
 void GestorParticulas::GenerarParticulas() {
   if (Particulas.size() >= maximo_particulas) return;
-  if (prob(rng) < 19) { 
+  if (prob(rng) < 25) { 
     int x = distX(rng);
-    Particulas.push_back(make_shared<Particula>(x, 0, 80, alto));
+    Particulas.push_back(make_shared<Particula>(x, 0, 250, alto));
   }
 }
 
