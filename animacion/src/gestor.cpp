@@ -6,12 +6,12 @@ GestorParticulas::GestorParticulas(int width, int height)
   : ancho(ancho), alto(alto),
     rng(static_cast<unsigned>(chrono::high_resolution_clock::now().time_since_epoch().count())),
     distX(0, width - 1),
-    distSpawn(0, 99),
+    prob(0, 99),
     maximo_particulas(300) {}
 
 void GestorParticulas::GenerarParticulas() {
   if (Particulas.size() >= maximo_particulas) return;
-  if (distSpawn(rng) < 19) { //probabilidad de 19%
+  if (prob(rng) < 19) { 
     int x = distX(rng);
     Particulas.push_back(make_shared<Particula>(x, 0, 80, alto));
   }

@@ -19,7 +19,7 @@ class GestorParticulas {
   mt19937 rng;
   uniform_int_distribution<int> distX;
   uniform_int_distribution<int> distY;
-  uniform_int_distribution<int> distSpawn;
+  uniform_int_distribution<int> prob;
 
   void GenerarParticulas();
 };
